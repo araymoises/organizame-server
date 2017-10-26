@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 
 
 app.get('/pdf/:id', function (req, res) {
-  var filePath = "/pdf/document-"+ req.params.id +".pdf";
+  var filePath = "/pdf/document-" + req.params.id +".pdf";
 
   fs.readFile(__dirname + filePath , function (err,data){
       res.contentType("application/pdf");
@@ -26,7 +26,7 @@ app.get('/pdf/:id', function (req, res) {
 });
 app.use('/api', apiRouter);
 
-app.listen(7000, function(){
+app.listen(8000, function(){
   console.log('¡Servidor encendido!');
-  console.log('La API Restfull está usando el puerto 7000.');
+  console.log('La API Restfull está usando el puerto 8000.');
 });
